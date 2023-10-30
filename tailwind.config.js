@@ -27,6 +27,7 @@ module.exports = {
         18: '18',
         25: '25',
         20: '20',
+        50: '50',
       },
       borderRadius: {
         main: '30px',
@@ -34,6 +35,10 @@ module.exports = {
       lineHeight: {
         loose: '6',
       },
+      width: {
+        150: '150',
+        125: '125',
+      }
     },
   },
   plugins: [],

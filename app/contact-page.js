@@ -1,11 +1,12 @@
 import { createViewModel } from './main-view-model';
+const frameModule = require('@nativescript/core/ui/frame');
 import { Frame, topmost } from '@nativescript/core';
 import { EventData } from '@nativescript/core/data/observable';
 import { alert } from '@nativescript/core/ui/dialogs';
 
 export function goBackToHome(args) {
   const page = args.object.page;
-  topmost().navigate('main-page');
+  frameModule.Frame.topmost().navigate('main-page');
 }
 
 export function submitForm(args) {

@@ -17,6 +17,9 @@
                     <Button text="Submit" tap="submitForm" class="submit rounded-2xl" />
                 </StackLayout>
             </ScrollView>
+            <StackLayout row="2" colSpan="3" class="h-full" verticalAlignment="center" >
+                <Image src="~/images/CS.png" class="img" />
+            </StackLayout>
         </StackLayout>
     </GridLayout>
 </Page>
