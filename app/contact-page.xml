@@ -13,7 +13,7 @@
                     <TextField hint="Email Address *" class="pt-20" id="emailField" keyboardType="email"/>
                     <TextField hint="Phone Number" maxLength="10" class="pt-20" id="numberField" keyboardType="number"/>
                     <TextField hint="Reason For Contact *" maxLength="20" class="pt-20" id="reasonField" />
-                    <TextField hint="Message *" maxLength="200" class="pt-20" textWrap="true" id="messageField" />
+                    <TextField hint="Message *" maxLength="2000" class="pt-20" textWrap="true" id="messageField" />
                     <Button text="Submit" tap="submitForm" class="submit rounded-2xl" />
                 </StackLayout>
             </ScrollView>
