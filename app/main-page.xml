@@ -1,0 +1,12 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true" loaded="onLoaded">
+    <ActionBar title="About Me App" icon="" />
+    <StackLayout class="p-4">
+        <Label text="About Me" class="text-3xl text-center" />
+        <Image src="~/images/me.png" class="img-main" />
+        <StackLayout class="p-15 items-center">
+            <Button text="Bio" tap="navigateToBio" class="main" />
+            <Button text="Skills" tap="navigateToSkills" class="main" />
+            <Button text="Contact" tap="navigateToContactMe" class="main" />
+        </StackLayout>
+    </StackLayout>
+</Page>

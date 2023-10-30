@@ -1,0 +1,24 @@
+<Page actionBarHidden="true" loaded="onLoaded">
+    <GridLayout rows="auto,*,auto" columns="*,*,*">
+        <StackLayout column="0" row="0">
+            <image src="https://img.icons8.com/fluency-systems-filled/96/home-screen.png" tap="goBackToHome" class="home" />
+        </StackLayout>
+        <StackLayout column="1" row="0">
+            <Label text="Skills" class="label" />
+        </StackLayout>
+        <StackLayout row="1" colSpan="3">
+            <ScrollView orientation="vertical">
+                <StackLayout>
+                    <Label textWrap="true" class="text-20 p-10" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+                    <Label textWrap="true" class="text-20 p-10" text="Vivamus aliquet mi in leo bibendum, non dictum libero interdum." />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+        <StackLayout class="footer" row="2" column="0">
+        <button class="next" text="Back" tap="goBack" />
+        </StackLayout>
+        <StackLayout class="footer" row="2" column="3">
+             <button class="next" text="Next" tap="navigateToNext" />
+        </StackLayout>
+    </GridLayout>
+</Page>
