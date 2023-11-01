@@ -8,7 +8,7 @@
         </StackLayout>
         <StackLayout row="1" colSpan="3" class="h-full">
             <ScrollView orientation="vertical">
-                <ListView items="{{skills}}" itemTap="onSkillTapped" class="h-full">
+                <ListView items="{{skills}}" itemTap="onItemTap" class="h-full">
                     <ListView.itemTemplate>
                         <GridLayout rows="auto" columns="*">
                             <Label text="{{name}}" class="text-center text-lg" />

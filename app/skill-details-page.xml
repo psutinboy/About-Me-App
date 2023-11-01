@@ -1,10 +1,10 @@
-<Page actionBarHidden="true">
+<Page actionBarHidden="true" navigatingTo="onNavigatingTo">
     <GridLayout rows="auto,*,auto" columns="*,*,*">
         <StackLayout column="1" row="0">
             <Label text="Skill Details" class="label" />
         </StackLayout>
         <StackLayout row="1" colSpan="3">
-            <Label text="{{skillDescription}}" class="description" />
+            <Label text="{{skillDescription}}" class="" id="skillDescription" />
         </StackLayout>
         <StackLayout class="footer" row="2" colSpan="3">
             <Button class="next" text="Back" tap="goBackToSkills" />

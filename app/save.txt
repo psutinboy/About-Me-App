@@ -1,0 +1,66 @@
+export function onLoaded(args) {
+    const page = args.object;
+    const viewModel = new Observable();
+    
+    viewModel.set('skills', [
+        { name: 'CompTIA A+', description: 'Description for Skill 1' },
+        { name: 'CompTIA Network+', description: 'Description for Skill 1' },
+        { name: 'CompTIA Server', description: 'Description for Skill 1' },
+        { name: 'CompTIA Security+', description: 'Description for Skill 1' },
+        { name: 'Web Developement', description: 'Description for Skill 1' },
+        { name: 'Mobile App Development', description: 'Description for Skill 1' },
+        { name: 'Programming', description: 'Description for Skill 1' },
+    ]);
+
+    page.bindingContext = viewModel;
+}
+
+export function onSkillTapped(args) {
+  const itemIndex = args.index;
+  const page = args.object.page;
+  const viewModel = page.bindingContext;
+  const skill = viewModel.getItem(itemIndex);
+  
+  // Navigate to the skill details page, passing the skill description as a context parameter.
+  page.frame.navigate({
+      moduleName: 'skill-details-page',
+      context: {
+          description: skill.description
+      }
+  });
+}
+
+
+
+
+
+
+
+
+<Page actionBarHidden="true" loaded="onLoaded">
+    <GridLayout rows="auto,*,auto" columns="*,*,*">
+        <StackLayout column="0" row="0">
+            <Image src="https://img.icons8.com/fluency-systems-filled/96/home-screen.png" tap="goBackToHome" class="home" />
+        </StackLayout>
+        <StackLayout column="1" row="0">
+            <Label text="Skills" class="label" />
+        </StackLayout>
+        <StackLayout row="1" colSpan="3" class="h-full">
+            <ScrollView orientation="vertical">
+                <ListView items="{{skills}}" itemTap="onSkillTapped" class="h-full">
+                    <ListView.itemTemplate>
+                        <GridLayout rows="auto" columns="*">
+                            <Label text="{{name}}" class="text-center text-lg" />
+                        </GridLayout>
+                    </ListView.itemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+        <StackLayout class="footer" row="2" column="0">
+            <Button class="next" text="Back" tap="goBack" />
+        </StackLayout>
+        <StackLayout class="footer" row="2" column="3">
+            <Button class="next" text="Next" tap="navigateToNext" />
+        </StackLayout>
+    </GridLayout>
+</Page>

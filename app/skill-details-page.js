@@ -3,14 +3,12 @@ import { createViewModel } from './main-view-model';
 const frameModule = require('@nativescript/core/ui/frame');
 import { Frame } from '@nativescript/core';
 
-export function onNavigatedTo(args) {
+exports.onNavigatingTo = function(args) {
     const page = args.object;
-    const navigationContext = page.navigationContext;
-    const viewModel = new Observable();
-    
-    viewModel.set('skillDescription', navigationContext.description);
-    
-    page.bindingContext = viewModel;
+    const context = page.navigationContext;
+  
+    const detailLabel = page.getViewById("detail");
+    detailLabel.text = context.name;
 }
 
 export function goBackToSkills(args) {
