@@ -1,5 +1,6 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" actionBarHidden="true" loaded="onLoaded">
     <ActionBar title="About Me App" icon="" />
+    <ScrollView>
     <StackLayout class="p-4">
         <Label text="About Me" class="text-3xl text-center" />
         <Image src="~/images/me.png" class="img-main" />
@@ -9,4 +10,5 @@
             <Button text="Contact" tap="navigateToContactMe" class="main" />
         </StackLayout>
     </StackLayout>
+    </ScrollView>
 </Page>

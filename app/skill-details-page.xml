@@ -1,13 +1,16 @@
-<Page actionBarHidden="true" navigatingTo="onNavigatingTo">
+<Page actionBarHidden="true" loaded="pageLoaded">
     <GridLayout rows="auto,*,auto" columns="*,*,*">
-        <StackLayout column="1" row="0">
+        <StackLayout row="0" colSpan="3">
             <Label text="Skill Details" class="label" />
         </StackLayout>
-        <StackLayout row="1" colSpan="3">
-            <Label text="{{skillDescription}}" class="" id="skillDescription" />
-        </StackLayout>
+        <ScrollView row="1" colSpan="3">
+            <StackLayout>
+                <Label text="{{ name }}" class="text-lg text-center" />
+                <Label text="{{ description }}" class="text-lg text center" textWrap="true" />
+            </StackLayout>
+        </ScrollView>
         <StackLayout class="footer" row="2" colSpan="3">
-            <Button class="next" text="Back" tap="goBackToSkills" />
+            <Button class="next" text="Back" tap="goBack" />
         </StackLayout>
     </GridLayout>
 </Page>

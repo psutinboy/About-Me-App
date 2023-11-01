@@ -1,4 +1,4 @@
-<Page actionBarHidden="true" loaded="onLoaded">
+<Page actionBarHidden="true" loaded="pageLoaded">
     <GridLayout rows="auto,*,auto" columns="*,*,*">
         <StackLayout column="0" row="0">
             <Image src="https://img.icons8.com/fluency-systems-filled/96/home-screen.png" tap="goBackToHome" class="home" />
@@ -6,17 +6,13 @@
         <StackLayout column="1" row="0">
             <Label text="Skills" class="label" />
         </StackLayout>
-        <StackLayout row="1" colSpan="3" class="h-full">
-            <ScrollView orientation="vertical">
-                <ListView items="{{skills}}" itemTap="onItemTap" class="h-full">
-                    <ListView.itemTemplate>
-                        <GridLayout rows="auto" columns="*">
-                            <Label text="{{name}}" class="text-center text-lg" />
-                        </GridLayout>
-                    </ListView.itemTemplate>
-                </ListView>
-            </ScrollView>
-        </StackLayout>
+        <ListView items="{{ skills }}" itemTap="onSkillTap" row="1" colSpan="3">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto" columns="*">
+                    <Label text="{{ name }}" class="skill-item" textWrap="true" textAlignment="center" verticalAlignment="center" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
         <StackLayout class="footer" row="2" column="0">
             <Button class="next" text="Back" tap="goBack" />
         </StackLayout>

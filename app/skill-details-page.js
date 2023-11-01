@@ -1,17 +1,18 @@
-import { Observable } from '@nativescript/core/data/observable';
-import { createViewModel } from './main-view-model';
 const frameModule = require('@nativescript/core/ui/frame');
-import { Frame } from '@nativescript/core';
+const Observable = require("@nativescript/core/data/observable").Observable;
 
-exports.onNavigatingTo = function(args) {
+export function pageLoaded(args) {
     const page = args.object;
-    const context = page.navigationContext;
-  
-    const detailLabel = page.getViewById("detail");
-    detailLabel.text = context.name;
+    const navigationContext = page.navigationContext;
+    const skill = navigationContext.skill;
+
+    // Log the skill and binding context for debugging
+    console.log("Skill:", skill);
+
+    // Explicitly set the skill object as the binding context
+    page.bindingContext = skill;
 }
 
-export function goBackToSkills(args) {
-    const page = args.object.page;
-    page.frame.goBack();
+export function goBack(args) {
+    frameModule.Frame.topmost().goBack();
 }
