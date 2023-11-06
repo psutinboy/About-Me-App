@@ -2,13 +2,13 @@ import { Observable } from '@nativescript/core/data/observable';
 const frameModule = require('@nativescript/core/ui/frame');
 
 const skillsData = [
-  { name: 'CompTIA A+', description: 'Description for Skill 1' },
-  { name: 'CompTIA Network+', description: 'Description for Skill 2' },
-  { name: 'CompTIA Server', description: 'Description for Skill 3' },
-  { name: 'CompTIA Security+', description: 'Description for Skill 4' },
-  { name: 'Web Development', description: 'Description for Skill 5' },
-  { name: 'Mobile App Development', description: 'Description for Skill 6' },
-  { name: 'Programming', description: 'Description for Skill 7' },
+  { name: 'CompTIA A+', description: 'I have my Certification for A+.' },
+  { name: 'CompTIA Network+', description: 'I have not gotten my certification for Network+ yet but I have all of the knowledge.' },
+  { name: 'CompTIA Server', description: 'I have not gotten my certification for Server yet but I have all of the knowledge.' },
+  { name: 'CompTIA Security+', description: 'I have not gotten my certification for Security+ yet but I have all of the knowledge.' },
+  { name: 'Web Development', description: 'I have basic skills in HTML, CSS, and JavaScript.' },
+  { name: 'Mobile App Development', description: 'I have skills in NaiveScript, Tailwind, XML, JavaScript, and CSS.' },
+  { name: 'Programming', description: 'I have skills in multiple programming languages including Python, JavaScript, HTML, CSS, XML, and Java.' },
 ];
 
 const viewModel = new Observable({
