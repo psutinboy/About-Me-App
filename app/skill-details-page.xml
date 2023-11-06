@@ -6,7 +6,7 @@
         <ScrollView row="1" colSpan="3">
             <StackLayout>
                 <Label text="{{ name }}" class="text-lg text-center" />
-                <Label text="{{ description }}" class="text-lg text center" textWrap="true" />
+                <Label text="{{ description }}" class="text-lg text-center leading-loose mx-3" textWrap="true" />
             </StackLayout>
         </ScrollView>
         <StackLayout class="footer" row="2" colSpan="3">

@@ -9,7 +9,7 @@
         <ListView items="{{ skills }}" itemTap="onSkillTap" row="1" colSpan="3">
             <ListView.itemTemplate>
                 <GridLayout rows="auto" columns="*">
-                    <Label text="{{ name }}" class="skill-item" textWrap="true" textAlignment="center" verticalAlignment="center" />
+                    <Label text="{{ name }}" class="text-center text-2xl" textWrap="true" textAlignment="center" verticalAlignment="center" />
                 </GridLayout>
             </ListView.itemTemplate>
         </ListView>
